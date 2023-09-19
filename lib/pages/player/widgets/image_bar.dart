@@ -8,18 +8,18 @@ class Imagebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
-      width: 150,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
+      height: 280,
+      width: 280,
+      decoration: BoxDecoration(
+        image: const DecorationImage(
           image: AppIcon.billie,
           fit: BoxFit.fill,
         ),
-        borderRadius: BorderRadius.only(
-          topRight: Radius.circular(150),
-          bottomRight: Radius.circular(150),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(35),
         ),
-        boxShadow: [
+        border: Border.all(width: 3.5, color: Color(0xDD2EB9A9)),
+        boxShadow: const [
           BoxShadow(
             color: AppColors.playerText,
             spreadRadius: 0,

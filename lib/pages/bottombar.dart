@@ -1,3 +1,4 @@
+import 'package:benom/pages/contact.dart';
 import 'package:benom/pages/favorites/favorites.dart';
 import 'package:benom/styles/app_color.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -5,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'home_page/home_page.dart';
-import 'music_list/music_list.dart';
 import 'player/player.dart';
 import 'search/search.dart';
 
@@ -22,10 +22,10 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     const Home(),
-    const Search(), const Player(),
-    const MusicList(),
+    const Search(),
+    const Player(),
     const Favorites(),
-
+    const Contact(),
   ];
 
   @override
@@ -39,15 +39,17 @@ class _HomePageState extends State<HomePage> {
           Icon(Icons.home, size: 30),
           Icon(Icons.search, size: 30),
           Icon(CupertinoIcons.play_circle, size: 45),
-          Icon(CupertinoIcons.music_albums, size: 30),
-          Icon(Icons.favorite_border,color: AppColors.bottombarFavr, size: 30),
+          Icon(Icons.favorite_border, color: AppColors.bottombarFavr, size: 30),
+          Icon(Icons.contact_phone, size: 30),
         ],
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            _color=AppColors.background;
-            if(_currentIndex==1) _color=AppColors.backgroundSearchIc;
-            if(_currentIndex==4) _color=AppColors.backgroundFavrIc;
+            _color = AppColors.background;
+            if (_currentIndex == 1) _color = AppColors.backgroundSearchIc;
+            if (_currentIndex == 3) _color = AppColors.backgroundFavrIc;
+            if (_currentIndex == 2) _color = Colors.orange.shade800;
+
           });
         },
       ),

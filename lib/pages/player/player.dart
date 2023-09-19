@@ -7,31 +7,58 @@ import 'widgets/slider.dart';
 import 'widgets/title.dart';
 
 class Player extends StatelessWidget {
- const Player({super.key});
+  const Player({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: AppColors.background,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustomTitle(),SliderSeeker(),
-          SizedBox(
-            height: 30,
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.orange.shade200,
+              Colors.orange.shade800,
+            ],begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Imagebar(),
-              NavBarMusic(),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Center(child: Text("by Oxunov713")),
-        ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [SizedBox(height: 50,),
+            CustomTitle(),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                Column(
+                  children: [
+                    Imagebar(),
+                    SizedBox(height: 30),
+                    SliderSeeker(),
+                  ],
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                NavBarMusic(),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: Text(
+                "by Oxunov713",
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

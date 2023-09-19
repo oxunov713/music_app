@@ -13,9 +13,10 @@ class _SliderSeekerState extends State<SliderSeeker> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Center(
+    return Center(
+      child: SizedBox(
+        height: 100,
+        width: 290,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -25,10 +26,10 @@ class _SliderSeekerState extends State<SliderSeeker> {
               max: duration.inSeconds.toDouble(),
               onChanged: (value) {
                 setState(() {});
-              },
+              },activeColor: Color(0xDD2EB9A9),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
+              padding: EdgeInsets.symmetric(horizontal: 15,),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -17,7 +17,7 @@ class CustomTitle extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Exo2",
                 fontWeight: FontWeight.w600,
-                fontSize: 30,
+                fontSize: 38,
                 color: AppColors.appBarText,
               ),
             ),
@@ -27,7 +27,7 @@ class CustomTitle extends StatelessWidget {
             Text(
               "Billie Eilish",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 26,
                 color: AppColors.playerText,
               ),
             ),

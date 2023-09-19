@@ -18,7 +18,7 @@ class NavBarIcon extends StatelessWidget {
       child: Icon(
         icon,
         size: 35,
-        color: AppColors.shade,
+        color: Color(0xDD2EB9A9),
       ),
     );
   }

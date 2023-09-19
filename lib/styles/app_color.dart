@@ -32,6 +32,8 @@ class AppColors {
 
   static const cards = Color(0xb3dbe9f6);
 
+  static const white = Color(0x4dffffff);
+
   static const cards2 = Color(0xddbe9f6);
 
   static const shade = Color(0xff6FABD3);

@@ -10,23 +10,17 @@ class NavBarMusic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 40),
+      margin: const EdgeInsets.only(right: 5),
       height: 450,
-      width: 60,
+      width: 48,
       decoration: BoxDecoration(
-        color: AppColors.border,
+        color: Colors.white54,
         borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: AppColors.shade,
-            spreadRadius: 0,
-            blurRadius: 10,
-            offset: Offset(3, 7),
-          ),
-        ],
-        border: Border.all(width: 1, color: AppColors.border),
+
+
+        //border: Border.all(width: 3, color: AppColors.border),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

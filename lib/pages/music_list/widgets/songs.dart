@@ -8,7 +8,7 @@ class Songs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 650,
+      height: 700,
       width: double.infinity,
       child: ListView(
         children: List.generate(
